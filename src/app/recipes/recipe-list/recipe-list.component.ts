@@ -9,8 +9,12 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   // array of object => Recipe
   recipes: Recipe[] = [
-    new Recipe('A Test Recipe', 'This is a simple test',
-      'http://www.taste.com.au/recipes/spicy-coconut-fish-curry-rice-noodles/ZGy6LsUM')
+    new Recipe('Roasted-broccoli',
+      'Stalks with a nutty tahini yogurt and Puy lentils',
+      'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/05/roasted-broccoli.jpg'),
+    new Recipe('Courgette & halloumi skewers',
+      'Marinade cheese with mint, lemon and olive oil',
+      'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--1201644_11.jpg')
   ];
 
   constructor() {
@@ -20,3 +24,4 @@ export class RecipeListComponent implements OnInit {
   }
 
 }
+
