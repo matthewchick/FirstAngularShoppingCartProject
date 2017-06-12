@@ -8,6 +8,7 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeListComponent implements OnInit {
   // array of object => Recipe
+  // static images can be stored in assets folder
   recipes: Recipe[] = [
     new Recipe('Roasted-broccoli',
       'Stalks with a nutty tahini yogurt and Puy lentils',
