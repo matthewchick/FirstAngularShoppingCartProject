@@ -6,10 +6,12 @@
 <div class="row">
   <div class="col-xs-12">
     <!-- property binding => [recipe]="recipeItem" => pass an object (recipeItem) via recipe to recipe-item.component-->
-    <!-- DataFlow from recipe-list.component => recipe-item.component -->
+    <!-- property binding (Top to bottom) DataFlow from recipe-list.component => recipe-item.component -->
+    <!-- event binding (bottom to Top) DataFlow from recipe-item.component => recipe-list.component -->
     <app-recipe-item
       *ngFor="let recipeItem of recipes"
-      [recipe]="recipeItem"></app-recipe-item>
+      [recipe]="recipeItem"
+      (recipeSelected)="onRecipeSelected(recipeItem)"></app-recipe-item>
     <!-- https://stackoverflow.com/questions/8554043/what-is-a-clearfix -->
     <!--a href="#" class="list-group-item clearfix">
     <div class="pull-left">

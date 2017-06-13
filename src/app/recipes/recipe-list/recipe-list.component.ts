@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -7,6 +7,8 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
+  // recipe data will be exposed to recipes.component
+  @Output() recipeWasSelected = new EventEmitter<Recipe>();
   // array of object => Recipe
   // static images can be stored in assets folder
   recipes: Recipe[] = [
@@ -22,6 +24,11 @@ export class RecipeListComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onRecipeSelected(selectedrecipeItem: Recipe) {
+    this.recipeWasSelected.emit(selectedrecipeItem);
+    console.log("recipeWasSelected's content is " + selectedrecipeItem.name);
   }
 
 }

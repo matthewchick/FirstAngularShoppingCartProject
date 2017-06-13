@@ -1,8 +1,17 @@
 <div class="row">
   <div class="col-md-5">
-    <app-recipe-list></app-recipe-list>
+    <!-- put recipeWasSelected object to selectedRecipe via $event -->
+    <app-recipe-list
+    (recipeWasSelected)="selectedRecipe = $event"></app-recipe-list>
   </div>
+  <!-- recipe-list and recipe-detail are the same sibling -->
+  <!-- pass selectedRecipe data to recipe-detail's recipeDetail -->
   <div class="col-md-7">
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail
+    *ngIf="selectedRecipe; else infoText"
+    [recipeDetail]="selectedRecipe"></app-recipe-detail>
+    <ng-template #infoText>
+      <p>Please select a Recipe!</p>
+    </ng-template>
   </div>
 </div>
