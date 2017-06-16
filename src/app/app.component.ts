@@ -1,3 +1,9 @@
+// app.component.ts
+/* learn two-ways binding => ngModel
+   property-binding => [] =
+   event-binding => ( ) ="onSelected($event)"
+   local reference with @ViewChild
+*/
 import { Component } from '@angular/core';
 
 @Component({

@@ -1,3 +1,4 @@
+// recipe-detail.component.ts
 import {Component, Input, OnInit} from '@angular/core';
 import {Recipe} from '../recipe.model';
 
@@ -14,5 +15,4 @@ export class RecipeDetailComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

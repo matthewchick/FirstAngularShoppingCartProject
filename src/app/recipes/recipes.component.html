@@ -1,6 +1,8 @@
+<!-- recipes.component.html -->
 <div class="row">
   <div class="col-md-5">
-    <!-- put recipeWasSelected object to selectedRecipe via $event -->
+    <!-- put recipeWasSelected object to selectedRecipe
+         (inside recipe-list.component)via $event -->
     <app-recipe-list
     (recipeWasSelected)="selectedRecipe = $event"></app-recipe-list>
   </div>

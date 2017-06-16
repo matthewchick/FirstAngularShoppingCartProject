@@ -1,3 +1,4 @@
+<!-- receipe-list.component.html -->
 <div class="row">
   <div class="col-xs-12">
     <button class="btn btn-success">New Recipe</button>
@@ -12,6 +13,8 @@
       *ngFor="let recipeItem of recipes"
       [recipe]="recipeItem"
       (recipeSelected)="onRecipeSelected(recipeItem)"></app-recipe-item>
+  </div>
+</div>
     <!-- https://stackoverflow.com/questions/8554043/what-is-a-clearfix -->
     <!--a href="#" class="list-group-item clearfix">
     <div class="pull-left">
@@ -40,6 +43,4 @@
     </a
     <app-recipe-item-- ></app-recipe-item-->
 
-  </div>
-</div>
 

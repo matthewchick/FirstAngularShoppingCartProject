@@ -1,10 +1,15 @@
 <div class="row">
+  <!-- col-screensize-numberofcolumns -->
+  <!-- xs < 768px => phones
+       sm > 768px => tablets
+       md > 992px => medium Desktops
+       lg > 1200px => large Desktops
+  -->
   <div class="col-xs-12">
     <img [src]="recipeDetail.imagePath"
          title="{{recipeDetail.name}}"
          class="img-responsive"
-         style="max-height: 100px;"
-    >
+         style="max-height: 100px;">
   </div>
 </div>
 <div class="row">
@@ -34,3 +39,4 @@
     Ingredients
   </div>
 </div>
+
