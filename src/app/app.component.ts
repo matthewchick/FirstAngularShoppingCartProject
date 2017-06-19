@@ -3,6 +3,7 @@
    property-binding => [] =
    event-binding => ( ) ="onSelected($event)"
    local reference with @ViewChild
+   https://stackoverflow.com/questions/30623825/how-to-use-jquery-with-angular2
 */
 /* three ways to declare javascript class => https://www.phpied.com/3-ways-to-define-a-javascript-class/
     1. var apple = {
