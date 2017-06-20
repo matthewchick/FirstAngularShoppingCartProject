@@ -47,6 +47,6 @@ export class AppComponent {
 
   onNavigate(feature: string) {
     this.loadedFeature = feature;
-    console.log("loadedFeature's content is " + this.loadedFeature);
+    // console.log("loadedFeature's content is " + this.loadedFeature);
   }
 }
