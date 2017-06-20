@@ -3,8 +3,9 @@
   <div class="col-md-5">
     <!-- put recipeWasSelected object to selectedRecipe
          (inside recipe-list.component)via $event -->
-    <app-recipe-list
-    (recipeWasSelected)="selectedRecipe = $event"></app-recipe-list>
+    <app-recipe-list></app-recipe-list>
+    <!-- Use method 2: service
+    (recipeWasSelected)="selectedRecipe = $event"></app-recipe-list> -->
   </div>
   <!-- recipe-list and recipe-detail are the same sibling -->
   <!-- pass selectedRecipe data to recipe-detail's recipeDetail -->

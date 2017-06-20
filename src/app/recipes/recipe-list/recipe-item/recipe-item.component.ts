@@ -1,6 +1,8 @@
 // recipe-item.component.ts
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Recipe} from '../../recipe.model';
+// method 1: import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Recipe } from '../../../shared/models/recipe.model';
+import { RecipeService } from '../../../shared/services/recipe.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -9,13 +11,16 @@ import {Recipe} from '../../recipe.model';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe;
-  @Output() recipeSelected = new EventEmitter<void>();
-  constructor() { }
+  /* method 1 : use event binding
+  @Output() recipeSelected = new EventEmitter<void>(); */
+  constructor(private receipeService: RecipeService) { }
 
   ngOnInit() {
   }
 
   onSelected() {
-    this.recipeSelected.emit();   // no return value
+    // method 1: this.recipeSelected.emit();   // no return value
+    // method 2: use EventEmitter on service => recipes.component.ts
+    this.receipeService.recipeSelected.emit(this.recipe); // get selected recipe from service
   }
 }

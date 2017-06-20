@@ -11,8 +11,10 @@
     <!-- event binding (bottom to Top) DataFlow from recipe-item.component => recipe-list.component -->
     <app-recipe-item
       *ngFor="let recipeItem of recipes"
-      [recipe]="recipeItem"
-      (recipeSelected)="onRecipeSelected(recipeItem)"></app-recipe-item>
+      [recipe]="recipeItem" >
+    </app-recipe-item>
+      <!-- Method 2: use service not to use the following statement
+      (recipeSelected)="onRecipeSelected(recipeItem)"></app-recipe-item>  -->
   </div>
 </div>
     <!-- https://stackoverflow.com/questions/8554043/what-is-a-clearfix -->
