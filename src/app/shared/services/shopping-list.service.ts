@@ -20,4 +20,14 @@ export class ShoppingListService {
     // console.log(ingredient);
     this.ingredientChanged.emit(this.ingredients.slice());
   }
+
+  addIngredientsFromRecipe(ingredients: Ingredient[]) {
+    /* method 1
+    for (let ingredient of ingredients) {
+      this.addIngredient(ingredient);
+    } */
+    // method 2 ... three dots to convert the array into a list
+    this.ingredients.push(...ingredients);
+    this.ingredientChanged.emit(this.ingredients.slice());
+  }
 }
