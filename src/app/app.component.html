@@ -6,8 +6,10 @@
       <!-- how to call other components under *ngIf <condition> -->
       <!-- app-recipes => recipes.component,
            app-shopping-list => shopping-list.component -->
-      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
-      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
+      <!-- use <router-outlet> instead of the following codes -->
+      <!--<app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list> -->
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

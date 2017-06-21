@@ -12,8 +12,10 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
 import { ShoppingListService } from './shared/services/shopping-list.service';
+import { AppRoutingModule } from './app-routing.modules';
 
 // new Directive or Component must be registered inside app.module.ts
+// show how to add AppRoutingModule
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,8 @@ import { ShoppingListService } from './shared/services/shopping-list.service';
     DropdownDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

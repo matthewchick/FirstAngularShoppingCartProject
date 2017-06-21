@@ -1,5 +1,4 @@
 // recipe.service.ts
-
 import {Recipe} from '../models/recipe.model';
 import {EventEmitter, Injectable} from '@angular/core';
 import {Ingredient} from '../models/ingredient.model';
@@ -10,7 +9,6 @@ import {ShoppingListService} from './shopping-list.service';
 export class RecipeService {
   // method 2: event -binding
   recipeSelected = new EventEmitter<Recipe>();
-
   // data encapsulation
   private recipes: Recipe[] = [
     new Recipe('Roasted-broccoli',
@@ -28,7 +26,7 @@ export class RecipeService {
       new Ingredient('cheese', 5)
     ])
   ];
-
+  // inject ShoppingListService
   constructor(private slService: ShoppingListService) {}
 
   getRecipes() {
