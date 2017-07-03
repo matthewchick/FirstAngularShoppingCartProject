@@ -23,9 +23,9 @@ export class ShoppingEditComponent implements OnInit {
   }
 
   onAddItem() {
-    let ingName = this.nameInputRef.nativeElement.value;
-    let ingAmount = this.amountInputRef.nativeElement.value;
-    let newIngredient: Ingredient = new Ingredient(ingName, ingAmount);
+    const ingName = this.nameInputRef.nativeElement.value;
+    const ingAmount = this.amountInputRef.nativeElement.value;
+    const newIngredient: Ingredient = new Ingredient(ingName, ingAmount);
     /* use method 3: shopping-list service to delete the following statement
     this.ingredientAdded.emit(newIngredient); */
     this.slService.addIngredient(newIngredient);

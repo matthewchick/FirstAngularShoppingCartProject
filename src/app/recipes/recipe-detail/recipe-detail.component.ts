@@ -23,6 +23,9 @@ export class RecipeDetailComponent implements OnInit {
 
   ngOnInit() {
     /* show how to pass parameter => localhost/recipes/1 */
+    /* The ActivatedRoute service provides a params Observable which
+       we can subscribe to to get the route parameters
+    */
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
       this.recipeDetail = this.recipeService.getRecipe(this.id);

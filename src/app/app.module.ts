@@ -6,6 +6,7 @@
    5. use angular routing instead of property-binding
 
    https://angular.io/guide/architecture
+   https://angular-2-training-book.rangle.io/handout/routing/routeparams.html
 */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -21,6 +22,7 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
 import { ShoppingListService } from './shared/services/shopping-list.service';
 import { AppRoutingModule } from './app-routing.modules';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 // new Directive or Component must be registered inside app.module.ts
 // show how to create and import AppRoutingModule from app-routing.modules.ts
@@ -37,7 +39,8 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
     ShoppingListComponent,
     ShoppingEditComponent,
     DropdownDirective,
-    RecipeStartComponent
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
