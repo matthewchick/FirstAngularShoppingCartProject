@@ -20,6 +20,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropdownDirective } from './shared/directives/dropdown.directive';
 import { ShoppingListService } from './shared/services/shopping-list.service';
 import { AppRoutingModule } from './app-routing.modules';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 // new Directive or Component must be registered inside app.module.ts
 // show how to create and import AppRoutingModule from app-routing.modules.ts
@@ -35,7 +36,8 @@ import { AppRoutingModule } from './app-routing.modules';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipeStartComponent
   ],
   imports: [
     BrowserModule,
