@@ -1,6 +1,9 @@
 <!-- recipe-item.component.html -->
 <!-- single item and add event binding => onSelected() -->
-<a href="#" class="list-group-item clearfix"
+<!-- delete href="#" to fix reload the page problem
+<a href="#" class="list-group-item clearfix"  -->
+<a style="cursor: pointer;"
+   class="list-group-item clearfix"
   (click)="onSelected()">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
