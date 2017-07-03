@@ -10,7 +10,7 @@ import {RecipeService} from '../../shared/services/recipe.service';
 })
 export class RecipeListComponent implements OnInit {
   // recipe data will be exposed to recipes.component  => event binding
-  /* method 2: use service
+  /* method 2: use service, the following does not need
   @Output() recipeWasSelected = new EventEmitter<Recipe>(); */
 
   // array of object => Recipe

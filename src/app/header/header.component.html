@@ -10,9 +10,11 @@
         <!-- method 1: event binding -->
         <!-- <li><a href="#" (click)="onSelect('recipe')">Recipes</a></li>
         <li><a href="#" (click)="onSelect('shopping-list')">Shopping List</a></li> -->
-        <!-- method 2: use angular routing -->
-        <li><a routerLink="recipes">Recipes</a></li>
-        <li><a routerLink="shopping-list">Shopping List</a></li>
+        <!-- method 2: use angular routing => routerLink and routerLinkActive
+        The RouterLinkActive directive lets you add a CSS class to an element when the link's route becomes active.
+        -->
+        <li routerLinkActive="active"><a routerLink="recipes">Recipes</a></li>
+        <li routerLinkActive="active"><a routerLink="shopping-list">Shopping List</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" >
         <li class="dropdown" appDropdown>

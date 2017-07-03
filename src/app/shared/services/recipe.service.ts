@@ -6,10 +6,11 @@ import {ShoppingListService} from './shopping-list.service';
 
 // call ShoppingListService so we use @Injectable() => DI
 @Injectable()
+// this service is available to recipes component and its child components
 export class RecipeService {
-  // method 2: event -binding
+  // method 2: event -binding => output Recipe array of object to recipeSelected to outside component, recipe-item.component
   recipeSelected = new EventEmitter<Recipe>();
-  // data encapsulation
+  // data encapsulation => Recipe [] is array of object
   private recipes: Recipe[] = [
     new Recipe('Roasted-broccoli',
       'Stalks with a nutty tahini yogurt and Puy lentils',
@@ -26,8 +27,8 @@ export class RecipeService {
       new Ingredient('cheese', 5)
     ])
   ];
-  // inject ShoppingListService
-  constructor(private slService: ShoppingListService) {}
+
+  constructor(private slService: ShoppingListService) {} // inject ShoppingListService
 
   getRecipes() {
     return this.recipes.slice();  // return the selected elements from an array
@@ -37,3 +38,4 @@ export class RecipeService {
     this.slService.addIngredientsFromRecipe(ingredients);
   }
 }
+

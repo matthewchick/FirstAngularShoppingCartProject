@@ -1,5 +1,8 @@
 <!-- app.component.html -->
-<app-header (featureSelected)="onNavigate($event)"></app-header>
+<!-- method 2: use angular routing -->
+<app-header></app-header>
+<!-- method 1: use event binding -->
+<!-- <app-header (featureSelected)="onNavigate($event)"></app-header> -->
 <div class="container">
   <div class = "row">
     <div class="col-md-12">
@@ -9,6 +12,7 @@
       <!-- use <router-outlet> instead of the following codes -->
       <!--<app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
       <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list> -->
+      <!-- angular 2 uses <router-outlet>, angular 1 uses <ng-view> -->
       <router-outlet></router-outlet>
     </div>
   </div>

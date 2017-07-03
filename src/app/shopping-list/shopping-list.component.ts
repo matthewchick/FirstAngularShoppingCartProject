@@ -29,6 +29,8 @@ export class ShoppingListComponent implements OnInit {
     )
   }
 
+  // (ingredients: Ingredient[]) => { }
+  // function(ingredient: Ingredient[]) { }
   /* Use method 3: shoppinglist service => the following function is not needed
   onIngredientAdded(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
