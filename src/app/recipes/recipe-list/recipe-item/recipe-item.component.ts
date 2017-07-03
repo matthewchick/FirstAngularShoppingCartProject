@@ -11,6 +11,9 @@ import { RecipeService } from '../../../shared/services/recipe.service';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe;
+  // get index from recipe-list.component.html
+  @Input() index: number;
+
   /* method 1 : use event binding
   @Output() recipeSelected = new EventEmitter<void>(); */
   /* method 2 : use DI */

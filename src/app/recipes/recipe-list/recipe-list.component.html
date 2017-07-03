@@ -10,9 +10,11 @@
     <!-- property binding => [recipe]="recipeItem" => pass an object (recipeItem) via recipe to recipe-item.component-->
     <!-- property binding (Top to bottom) DataFlow from recipe-list.component => recipe-item.component -->
     <!-- event binding (bottom to Top) DataFlow from recipe-item.component => recipe-list.component -->
+    <!-- [index] = "i" is property-binding -->
     <app-recipe-item
-      *ngFor="let recipeItem of recipes"
-      [recipe]="recipeItem" >
+      *ngFor="let recipeItem of recipes; let i = index"
+      [recipe]="recipeItem"
+      [index]="i">
     </app-recipe-item>
       <!-- Method 2: use service not to use the following statement
       (recipeSelected)="onRecipeSelected(recipeItem)"></app-recipe-item>  -->
