@@ -34,6 +34,11 @@ export class RecipeService {
     return this.recipes.slice();  // return the selected elements from an array
   }
 
+  // using child routing => add the following method to get which recipe is shown above
+  getRecipe(index: number) {
+    return this.recipes[index];
+  }
+
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredientsFromRecipe(ingredients);
   }

@@ -14,14 +14,16 @@ export class RecipeItemComponent implements OnInit {
   /* method 1 : use event binding
   @Output() recipeSelected = new EventEmitter<void>(); */
   /* method 2 : use DI */
-  constructor(private receipeService: RecipeService) { }
+  /* use child routing, the following do not need
+  constructor(private receipeService: RecipeService) { } */
 
   ngOnInit() {
   }
-
+  /* use child routing, the following do not need
   onSelected() {
     // method 1: this.recipeSelected.emit();   // no return value
     // method 2: use EventEmitter on service => emitting to recipes.component.ts
     this.receipeService.recipeSelected.emit(this.recipe); // get selected recipe from service
   }
+  */
 }

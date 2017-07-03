@@ -10,7 +10,9 @@
   <!-- recipe-list and recipe-detail are the same sibling -->
   <!-- pass selectedRecipe data to recipe-detail's recipeDetail -->
   <div class="col-md-7">
-    <!-- localhost:4200/recipes -->
+    <!-- using child routing to delete the following => localhost:4200/recipes => jump to recipe-detail.component
+         instead of property-binding method
+    -->
     <router-outlet></router-outlet>
     <!-- <app-recipe-detail
     *ngIf="selectedRecipe; else infoText"

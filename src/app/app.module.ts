@@ -2,8 +2,8 @@
    1. create components and model
    2. create dropdown directive and use directives, ng-class, *ngFor, *ngIF, ngStyle
    3. use event or property or two ways binding
-   4. use service with DI
-   5. use angular routing
+   4. use service with DI instead of data-binding
+   5. use angular routing instead of property-binding
 
    https://angular.io/guide/architecture
 */
