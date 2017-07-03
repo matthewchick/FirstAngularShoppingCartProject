@@ -2,7 +2,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Recipe} from '../../shared/models/recipe.model';
 import {RecipeService} from '../../shared/services/recipe.service';
-import {ActivatedRoute, Params} from '@angular/router';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -19,7 +19,8 @@ export class RecipeDetailComponent implements OnInit {
   */
   // use child routing, add ActivatedRoute
   constructor(private recipeService: RecipeService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
     /* show how to pass parameter => localhost/recipes/1 */
@@ -30,6 +31,12 @@ export class RecipeDetailComponent implements OnInit {
       this.id = +params['id'];
       this.recipeDetail = this.recipeService.getRecipe(this.id);
     })
+  }
+
+  // relativeTo is used to navigate to relative path
+  onEditRecipe() {
+    this.router.navigate(['edit'], {relativeTo: this.route});
+    // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
   }
 
   onAddToShoppingList() {

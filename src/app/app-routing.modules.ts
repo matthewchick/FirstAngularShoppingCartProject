@@ -17,8 +17,8 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full'},
   { path: 'recipes', component: RecipesComponent, children: [
     { path: '', component: RecipeStartComponent },      // localhost:4200/recipes
-    { path: ':id', component: RecipeDetailComponent },   // localhost:4200/recipes/id
     { path: 'new', component: RecipeEditComponent },
+    { path: ':id', component: RecipeDetailComponent },   // localhost:4200/recipes/id
     { path: ':id/edit', component: RecipeEditComponent }
   ] },
   { path: 'shopping-list', component: ShoppingListComponent }

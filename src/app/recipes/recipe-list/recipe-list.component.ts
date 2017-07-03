@@ -2,6 +2,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Recipe } from '../../shared/models/recipe.model';
 import {RecipeService} from '../../shared/services/recipe.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-recipe-list',
@@ -27,13 +28,21 @@ export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[];
 
-  constructor(private recipeService: RecipeService) {
+  /* The Angular Router enables navigation from one view to the next as users perform application tasks.
+
+   */
+  constructor(private recipeService: RecipeService,
+              private router: Router,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit() {
     this.recipes = this.recipeService.getRecipes(); // get back recipe data stored in RecipeService
   }
 
+  onNewRecipe() {
+    this.router.navigate(['new'], {relativeTo: this.route} );
+  }
   /* method 2: use service
   onRecipeSelected(selectedrecipeItem: Recipe) {
     this.recipeWasSelected.emit(selectedrecipeItem);
