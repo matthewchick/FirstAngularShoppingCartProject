@@ -10,16 +10,21 @@ import { RecipeService } from '../shared/services/recipe.service';
   providers: [RecipeService] // child components: recipe-item and recipe-list can share the same service
 })
 export class RecipesComponent implements OnInit {
-  selectedRecipe: Recipe;
+  // selectedRecipe: Recipe;
   // this service, RecipeService is available to recipes component and its child components
-  constructor(private recipeService: RecipeService) { }
-
+  constructor() { }
+  // constructor(private recipeService: RecipeService) { }
   ngOnInit() {
-    // method 2: listener to get data from this.recipeService.recipeSelected.emit()
-    this.recipeService.recipeSelected.subscribe(
-      (recipe: Recipe) => {
-        this.selectedRecipe = recipe;
-      }
-    );
+    // Observable.subscribe() is used to subscribe to messages that are sent to an observable
+    // method 3: since recipeSelected = new EventEmitter<Recipe>();  <= not used inside recipe.service.ts
+    //           the following is not needed
+    // method 2: step 1. recipeSelected = new EventEmitter<Recipe>(); in service
+    //           step 2. this.recipeService.recipeSelected.emit()
+    //           step 3. this.recipeService.recipeSelected.subscribe( ... ) listener to get data from step 2
+    // this.recipeService.recipeSelected.subscribe(
+    //   (recipe: Recipe) => {
+    //     this.selectedRecipe = recipe;
+    //   }
+    // );
   }
 }

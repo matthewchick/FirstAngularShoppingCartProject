@@ -9,7 +9,8 @@ import {ShoppingListService} from './shopping-list.service';
 // this service is available to recipes component and its child components
 export class RecipeService {
   // method 2: event -binding => output Recipe array of object to recipeSelected to outside component, recipe-item.component
-  recipeSelected = new EventEmitter<Recipe>();
+  // method 3: recipeSelected = new EventEmitter<Recipe>();  <= not used
+
   // data encapsulation => Recipe [] is array of object
   private recipes: Recipe[] = [
     new Recipe('Roasted-broccoli',
